@@ -1,49 +1,47 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Flexbox e Grid</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="layout.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox e Grid</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="layout.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <ul>
+        <li><a href="index.html">HTML e Acessibilidade</a></li>
+        <li><a href="medidas.html">Medidas</a></li>
+        <li><a href="responsividade.html">Responsividade</a></li>
+        <li><a href="layout.html" class="ativo">Flexbox e Grid</a></li>
+        <li><a href="animacoes.html">Animações</a></li>
+      </ul>
+    </nav>
 
-  <nav class="navbar">
-    <ul>
-      <li><a href="index.html">HTML e Acessibilidade</a></li>
-      <li><a href="medidas.html">Medidas</a></li>
-      <li><a href="responsividade.html">Responsividade</a></li>
-      <li><a href="layout.html" class="ativo">Flexbox e Grid</a></li>
-      <li><a href="animacoes.html">Animações</a></li>
-    </ul>
-  </nav>
+    <header class="top-bar">
+      <h1>Flexbox e Grid</h1>
+    </header>
 
-  <header class="top-bar">
-    <h1>Flexbox e Grid</h1>
-  </header>
+    <main class="content">
+      <section class="intro">
+        <h2>8) Diferença entre Flexbox e Grid</h2>
+        <p>
+          Tanto Flexbox quanto Grid são formas de organizar elementos na tela
+          com CSS. A diferença está em como cada um trabalha: Flexbox em uma
+          direção só, Grid em linhas e colunas ao mesmo tempo.
+        </p>
+      </section>
 
-  <main class="content">
+      <!-- ==================== FLEXBOX ==================== -->
+      <section class="secao-layout">
+        <h2>Flexbox — uma direção</h2>
 
-    <section class="intro">
-      <h2>8) Diferença entre Flexbox e Grid</h2>
-      <p>
-        Tanto Flexbox quanto Grid são formas de organizar elementos na tela com CSS.
-        A diferença está em como cada um trabalha: Flexbox em uma direção só,
-        Grid em linhas e colunas ao mesmo tempo.
-      </p>
-    </section>
-
-    <!-- ==================== FLEXBOX ==================== -->
-    <section class="secao-layout">
-      <h2>Flexbox — uma direção</h2>
-
-      <!-- flex-direction -->
-      <div class="bloco-exemplo">
-        <div class="bloco-codigo">
-          <h3>flex-direction</h3>
-          <p>Define se os itens ficam em linha ou em coluna.</p>
-          <pre>
+        <!-- flex-direction -->
+        <div class="bloco-exemplo">
+          <div class="bloco-codigo">
+            <h3>flex-direction</h3>
+            <p>Define se os itens ficam em linha ou em coluna.</p>
+            <pre>
 .container {
   display: flex;
   flex-direction: row; /* padrão */
@@ -53,30 +51,34 @@
   display: flex;
   flex-direction: column;
 }
-          </pre>
-        </div>
-        <div class="bloco-demo">
-          <p class="label-demo">row (padrão)</p>
-          <div class="demo-flex demo-row">
-            <div class="flex-item">1</div>
-            <div class="flex-item">2</div>
-            <div class="flex-item">3</div>
+          </pre
+            >
           </div>
-          <p class="label-demo">column</p>
-          <div class="demo-flex demo-column">
-            <div class="flex-item">1</div>
-            <div class="flex-item">2</div>
-            <div class="flex-item">3</div>
+          <div class="bloco-demo">
+            <p class="label-demo">row (padrão)</p>
+            <div class="demo-flex demo-row">
+              <div class="flex-item">1</div>
+              <div class="flex-item">2</div>
+              <div class="flex-item">3</div>
+            </div>
+            <p class="label-demo">column</p>
+            <div class="demo-flex demo-column">
+              <div class="flex-item">1</div>
+              <div class="flex-item">2</div>
+              <div class="flex-item">3</div>
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- justify-content -->
-      <div class="bloco-exemplo">
-        <div class="bloco-codigo">
-          <h3>justify-content</h3>
-          <p>Alinha os itens no <strong>eixo principal</strong> (horizontal no row).</p>
-          <pre>
+        <!-- justify-content -->
+        <div class="bloco-exemplo">
+          <div class="bloco-codigo">
+            <h3>justify-content</h3>
+            <p>
+              Alinha os itens no <strong>eixo principal</strong> (horizontal no
+              row).
+            </p>
+            <pre>
 /* agrupa no início */
 justify-content: flex-start;
 
@@ -91,48 +93,52 @@ justify-content: space-between;
 
 /* espaço em volta dos itens */
 justify-content: space-around;
-          </pre>
+          </pre
+            >
+          </div>
+          <div class="bloco-demo">
+            <p class="label-demo">flex-start</p>
+            <div class="demo-flex jc-start">
+              <div class="flex-item">A</div>
+              <div class="flex-item">B</div>
+              <div class="flex-item">C</div>
+            </div>
+            <p class="label-demo">center</p>
+            <div class="demo-flex jc-center">
+              <div class="flex-item">A</div>
+              <div class="flex-item">B</div>
+              <div class="flex-item">C</div>
+            </div>
+            <p class="label-demo">flex-end</p>
+            <div class="demo-flex jc-end">
+              <div class="flex-item">A</div>
+              <div class="flex-item">B</div>
+              <div class="flex-item">C</div>
+            </div>
+            <p class="label-demo">space-between</p>
+            <div class="demo-flex jc-between">
+              <div class="flex-item">A</div>
+              <div class="flex-item">B</div>
+              <div class="flex-item">C</div>
+            </div>
+            <p class="label-demo">space-around</p>
+            <div class="demo-flex jc-around">
+              <div class="flex-item">A</div>
+              <div class="flex-item">B</div>
+              <div class="flex-item">C</div>
+            </div>
+          </div>
         </div>
-        <div class="bloco-demo">
-          <p class="label-demo">flex-start</p>
-          <div class="demo-flex jc-start">
-            <div class="flex-item">A</div>
-            <div class="flex-item">B</div>
-            <div class="flex-item">C</div>
-          </div>
-          <p class="label-demo">center</p>
-          <div class="demo-flex jc-center">
-            <div class="flex-item">A</div>
-            <div class="flex-item">B</div>
-            <div class="flex-item">C</div>
-          </div>
-          <p class="label-demo">flex-end</p>
-          <div class="demo-flex jc-end">
-            <div class="flex-item">A</div>
-            <div class="flex-item">B</div>
-            <div class="flex-item">C</div>
-          </div>
-          <p class="label-demo">space-between</p>
-          <div class="demo-flex jc-between">
-            <div class="flex-item">A</div>
-            <div class="flex-item">B</div>
-            <div class="flex-item">C</div>
-          </div>
-          <p class="label-demo">space-around</p>
-          <div class="demo-flex jc-around">
-            <div class="flex-item">A</div>
-            <div class="flex-item">B</div>
-            <div class="flex-item">C</div>
-          </div>
-        </div>
-      </div>
 
-      <!-- align-items -->
-      <div class="bloco-exemplo">
-        <div class="bloco-codigo">
-          <h3>align-items</h3>
-          <p>Alinha os itens no <strong>eixo cruzado</strong> (vertical no row).</p>
-          <pre>
+        <!-- align-items -->
+        <div class="bloco-exemplo">
+          <div class="bloco-codigo">
+            <h3>align-items</h3>
+            <p>
+              Alinha os itens no <strong>eixo cruzado</strong> (vertical no
+              row).
+            </p>
+            <pre>
 /* estica para preencher (padrão) */
 align-items: stretch;
 
@@ -144,78 +150,96 @@ align-items: center;
 
 /* alinha embaixo */
 align-items: flex-end;
-          </pre>
+          </pre
+            >
+          </div>
+          <div class="bloco-demo">
+            <p class="label-demo">stretch</p>
+            <div class="demo-flex demo-alto ai-stretch">
+              <div class="flex-item">A</div>
+              <div class="flex-item">B</div>
+              <div class="flex-item">C</div>
+            </div>
+            <p class="label-demo">flex-start</p>
+            <div class="demo-flex demo-alto ai-start">
+              <div class="flex-item">A</div>
+              <div class="flex-item">B</div>
+              <div class="flex-item">C</div>
+            </div>
+            <p class="label-demo">center</p>
+            <div class="demo-flex demo-alto ai-center">
+              <div class="flex-item">A</div>
+              <div class="flex-item">B</div>
+              <div class="flex-item">C</div>
+            </div>
+            <p class="label-demo">flex-end</p>
+            <div class="demo-flex demo-alto ai-end">
+              <div class="flex-item">A</div>
+              <div class="flex-item">B</div>
+              <div class="flex-item">C</div>
+            </div>
+          </div>
         </div>
-        <div class="bloco-demo">
-          <p class="label-demo">flex-start</p>
-          <div class="demo-flex demo-alto ai-start">
-            <div class="flex-item">A</div>
-            <div class="flex-item flex-item-alto">B</div>
-            <div class="flex-item">C</div>
-          </div>
-          <p class="label-demo">center</p>
-          <div class="demo-flex demo-alto ai-center">
-            <div class="flex-item">A</div>
-            <div class="flex-item flex-item-alto">B</div>
-            <div class="flex-item">C</div>
-          </div>
-          <p class="label-demo">flex-end</p>
-          <div class="demo-flex demo-alto ai-end">
-            <div class="flex-item">A</div>
-            <div class="flex-item flex-item-alto">B</div>
-            <div class="flex-item">C</div>
-          </div>
-        </div>
-      </div>
 
-      <!-- gap e flex-wrap -->
-      <div class="bloco-exemplo">
-        <div class="bloco-codigo">
-          <h3>gap e flex-wrap</h3>
-          <p><code>gap</code> define o espaço entre os itens. <code>flex-wrap</code> permite que os itens quebrem linha quando não cabem.</p>
-          <pre>
+        <!-- gap e flex-wrap -->
+        <div class="bloco-exemplo">
+          <div class="bloco-codigo">
+            <h3>gap e flex-wrap</h3>
+            <p>
+              <code>gap</code> define o espaço entre os itens.
+              <code>flex-wrap</code> permite que os itens quebrem linha quando
+              não cabem.
+            </p>
+            <pre>
 .container {
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
 }
-          </pre>
-        </div>
-        <div class="bloco-demo">
-          <p class="label-demo">wrap com gap — redimensione a janela!</p>
-          <div class="demo-flex demo-wrap">
-            <div class="flex-item">Item 1</div>
-            <div class="flex-item">Item 2</div>
-            <div class="flex-item">Item 3</div>
-            <div class="flex-item">Item 4</div>
-            <div class="flex-item">Item 5</div>
+          </pre
+            >
+          </div>
+          <div class="bloco-demo">
+            <p class="label-demo">wrap com gap — redimensione a janela!</p>
+            <div class="demo-flex demo-wrap">
+              <div class="flex-item">Item 1</div>
+              <div class="flex-item">Item 2</div>
+              <div class="flex-item">Item 3</div>
+              <div class="flex-item">Item 4</div>
+              <div class="flex-item">Item 5</div>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="card quando-usar">
-        <h3>9) Quando usar Flexbox?</h3>
-        <p>Use Flexbox quando precisar organizar elementos em <strong>uma direção</strong>:</p>
-        <pre>
+        <div class="card quando-usar">
+          <h3>9) Quando usar Flexbox?</h3>
+          <p>
+            Use Flexbox quando precisar organizar elementos em
+            <strong>uma direção</strong>:
+          </p>
+          <pre>
 ✔ Menus de navegação
 ✔ Botões lado a lado
 ✔ Centralizar um elemento na tela
 ✔ Barras com logo + links
 ✔ Formulários em coluna
-        </pre>
-      </div>
-    </section>
+        </pre
+          >
+        </div>
+      </section>
 
-    <!-- ==================== GRID ==================== -->
-    <section class="secao-layout">
-      <h2>Grid — linhas e colunas</h2>
+      <!-- ==================== GRID ==================== -->
+      <section class="secao-layout">
+        <h2>Grid — linhas e colunas</h2>
 
-      <!-- grid-template-columns -->
-      <div class="bloco-exemplo">
-        <div class="bloco-codigo">
-          <h3>grid-template-columns</h3>
-          <p>Define quantas colunas o grid terá e qual o tamanho de cada uma.</p>
-          <pre>
+        <!-- grid-template-columns -->
+        <div class="bloco-exemplo">
+          <div class="bloco-codigo">
+            <h3>grid-template-columns</h3>
+            <p>
+              Define quantas colunas o grid terá e qual o tamanho de cada uma.
+            </p>
+            <pre>
 /* 3 colunas iguais */
 grid-template-columns:
   repeat(3, 1fr);
@@ -228,40 +252,41 @@ grid-template-columns:
 grid-template-columns:
   repeat(auto-fit,
   minmax(150px, 1fr));
-          </pre>
+          </pre
+            >
+          </div>
+          <div class="bloco-demo">
+            <p class="label-demo">repeat(3, 1fr) — 3 colunas iguais</p>
+            <div class="demo-grid grid-3col">
+              <div class="grid-item">1</div>
+              <div class="grid-item">2</div>
+              <div class="grid-item">3</div>
+              <div class="grid-item">4</div>
+              <div class="grid-item">5</div>
+              <div class="grid-item">6</div>
+            </div>
+            <p class="label-demo">200px 1fr 200px — coluna do meio flexível</p>
+            <div class="demo-grid grid-mista">
+              <div class="grid-item">Lateral</div>
+              <div class="grid-item">Centro</div>
+              <div class="grid-item">Lateral</div>
+            </div>
+            <p class="label-demo">auto-fit + minmax — responsivo automático</p>
+            <div class="demo-grid grid-autofit">
+              <div class="grid-item">Card</div>
+              <div class="grid-item">Card</div>
+              <div class="grid-item">Card</div>
+              <div class="grid-item">Card</div>
+            </div>
+          </div>
         </div>
-        <div class="bloco-demo">
-          <p class="label-demo">repeat(3, 1fr) — 3 colunas iguais</p>
-          <div class="demo-grid grid-3col">
-            <div class="grid-item">1</div>
-            <div class="grid-item">2</div>
-            <div class="grid-item">3</div>
-            <div class="grid-item">4</div>
-            <div class="grid-item">5</div>
-            <div class="grid-item">6</div>
-          </div>
-          <p class="label-demo">200px 1fr 200px — coluna do meio flexível</p>
-          <div class="demo-grid grid-mista">
-            <div class="grid-item">Lateral</div>
-            <div class="grid-item">Centro</div>
-            <div class="grid-item">Lateral</div>
-          </div>
-          <p class="label-demo">auto-fit + minmax — responsivo automático</p>
-          <div class="demo-grid grid-autofit">
-            <div class="grid-item">Card</div>
-            <div class="grid-item">Card</div>
-            <div class="grid-item">Card</div>
-            <div class="grid-item">Card</div>
-          </div>
-        </div>
-      </div>
 
-      <!-- grid-template-rows -->
-      <div class="bloco-exemplo">
-        <div class="bloco-codigo">
-          <h3>grid-template-rows</h3>
-          <p>Define a altura de cada linha do grid.</p>
-          <pre>
+        <!-- grid-template-rows -->
+        <div class="bloco-exemplo">
+          <div class="bloco-codigo">
+            <h3>grid-template-rows</h3>
+            <p>Define a altura de cada linha do grid.</p>
+            <pre>
 .container {
   display: grid;
   grid-template-columns:
@@ -269,25 +294,26 @@ grid-template-columns:
   grid-template-rows:
     80px 120px;
 }
-          </pre>
-        </div>
-        <div class="bloco-demo">
-          <p class="label-demo">linhas com alturas diferentes</p>
-          <div class="demo-grid grid-rows">
-            <div class="grid-item">Linha 1</div>
-            <div class="grid-item">Linha 1</div>
-            <div class="grid-item">Linha 2</div>
-            <div class="grid-item">Linha 2</div>
+          </pre
+            >
+          </div>
+          <div class="bloco-demo">
+            <p class="label-demo">linhas com alturas diferentes</p>
+            <div class="demo-grid grid-rows">
+              <div class="grid-item">Linha 1</div>
+              <div class="grid-item">Linha 1</div>
+              <div class="grid-item">Linha 2</div>
+              <div class="grid-item">Linha 2</div>
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- gap no grid -->
-      <div class="bloco-exemplo">
-        <div class="bloco-codigo">
-          <h3>gap no Grid</h3>
-          <p>Define o espaço entre as linhas e colunas do grid.</p>
-          <pre>
+        <!-- gap no grid -->
+        <div class="bloco-exemplo">
+          <div class="bloco-codigo">
+            <h3>gap no Grid</h3>
+            <p>Define o espaço entre as linhas e colunas do grid.</p>
+            <pre>
 .container {
   display: grid;
   grid-template-columns:
@@ -299,40 +325,45 @@ grid-template-columns:
   /* gap diferente: linha coluna */
   gap: 2rem 0.5rem;
 }
-          </pre>
-        </div>
-        <div class="bloco-demo">
-          <p class="label-demo">gap: 1.5rem</p>
-          <div class="demo-grid grid-gap">
-            <div class="grid-item">A</div>
-            <div class="grid-item">B</div>
-            <div class="grid-item">C</div>
-            <div class="grid-item">D</div>
-            <div class="grid-item">E</div>
-            <div class="grid-item">F</div>
+          </pre
+            >
+          </div>
+          <div class="bloco-demo">
+            <p class="label-demo">gap: 1.5rem</p>
+            <div class="demo-grid grid-gap">
+              <div class="grid-item">A</div>
+              <div class="grid-item">B</div>
+              <div class="grid-item">C</div>
+              <div class="grid-item">D</div>
+              <div class="grid-item">E</div>
+              <div class="grid-item">F</div>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="card quando-usar">
-        <h3>9) Quando usar Grid?</h3>
-        <p>Use Grid quando precisar organizar elementos em <strong>duas direções</strong>:</p>
-        <pre>
+        <div class="card quando-usar">
+          <h3>9) Quando usar Grid?</h3>
+          <p>
+            Use Grid quando precisar organizar elementos em
+            <strong>duas direções</strong>:
+          </p>
+          <pre>
 ✔ Layout de página inteira
 ✔ Galerias de fotos
 ✔ Painéis com colunas e linhas
 ✔ Sistemas de cards complexos
-        </pre>
-      </div>
-    </section>
+        </pre
+          >
+        </div>
+      </section>
 
-    <!-- Resumo comparativo -->
-    <section class="comparison">
-      <h2>Resumo: Flexbox vs Grid</h2>
-      <div class="comparison-box">
-        <div class="bad">
-          <h3>Flexbox</h3>
-          <pre>
+      <!-- Resumo comparativo -->
+      <section class="comparison">
+        <h2>Resumo: Flexbox vs Grid</h2>
+        <div class="comparison-box">
+          <div class="bad">
+            <h3>Flexbox</h3>
+            <pre>
 display: flex
 flex-direction: row | column
 justify-content: center | space-between...
@@ -341,27 +372,27 @@ gap: 1rem
 flex-wrap: wrap
 
 → Melhor para 1 direção
-          </pre>
-        </div>
-        <div class="good">
-          <h3>Grid</h3>
-          <pre>
+          </pre
+            >
+          </div>
+          <div class="good">
+            <h3>Grid</h3>
+            <pre>
 display: grid
 grid-template-columns: repeat(3, 1fr)
 grid-template-rows: 100px 200px
 gap: 1rem
 
 → Melhor para 2 direções
-          </pre>
+          </pre
+            >
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </main>
 
-  </main>
-
-  <footer>
-    <p>@todos os direitos reservados</p>
-  </footer>
-
-</body>
+    <footer>
+      <p>@todos os direitos reservados</p>
+    </footer>
+  </body>
 </html>
