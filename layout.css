@@ -1,3 +1,171 @@
+code {
+  background: #ccc;
+  padding: 0.1rem 0.3rem;
+  border-radius: 3px;
+  font-family: "Courier New", monospace;
+  font-size: 0.9rem;
+}
+
+/* ===== SEÇÃO ===== */
+.secao-layout {
+  margin-top: 4rem;
+}
+
+.secao-layout h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.quando-usar {
+  margin-top: 2rem;
+}
+
+/* ===== BLOCO EXEMPLO: código + demo lado a lado ===== */
+.bloco-exemplo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  background: #b5b5b5;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.bloco-codigo h3 {
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+.bloco-codigo p {
+  color: white;
+  margin-bottom: 0.8rem;
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+
+.bloco-demo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.label-demo {
+  color: white;
+  font-size: 0.8rem;
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+
+/* ===== ITENS BASE ===== */
+.flex-item {
+  background: #555;
+  color: white;
+  padding: 0.5rem 0.8rem;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 0.85rem;
+}
+
+.flex-item-alto {
+  padding: 1.2rem 0.8rem;
+}
+
+.grid-item {
+  background: #555;
+  color: white;
+  padding: 0.6rem;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 0.85rem;
+}
+
+/* ===== DEMO FLEX BASE ===== */
+.demo-flex {
+  display: flex;
+  background: #9e9e9e;
+  border-radius: 4px;
+  padding: 0.4rem;
+  gap: 0.4rem;
+  min-height: 40px;
+}
+
+/* flex-direction */
+.demo-row {
+  flex-direction: row;
+}
+
+.demo-column {
+  flex-direction: column;
+}
+
+/* justify-content */
+.jc-start  { justify-content: flex-start; }
+.jc-center { justify-content: center; }
+.jc-end    { justify-content: flex-end; }
+.jc-between { justify-content: space-between; }
+.jc-around  { justify-content: space-around; }
+
+/* align-items — container com altura para ficar visível */
+.demo-alto {
+  height: 70px;
+  align-items: flex-start; /* padrão visual, sobrescrito abaixo */
+}
+
+.ai-start  { align-items: flex-start; }
+.ai-center { align-items: center; }
+.ai-end    { align-items: flex-end; }
+
+/* flex-wrap */
+.demo-wrap {
+  flex-wrap: wrap;
+}
+
+/* ===== DEMO GRID ===== */
+.demo-grid {
+  display: grid;
+  gap: 0.4rem;
+  background: #9e9e9e;
+  padding: 0.4rem;
+  border-radius: 4px;
+}
+
+/* 3 colunas iguais */
+.grid-3col {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* coluna mista: 200px centro flex 200px */
+.grid-mista {
+  grid-template-columns: 80px 1fr 80px;
+}
+
+/* auto-fit: colunas que se adaptam */
+.grid-autofit {
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+}
+
+/* linhas com alturas diferentes */
+.grid-rows {
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 50px 90px;
+}
+
+/* gap maior para destacar */
+.grid-gap {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+/* ===== RESPONSIVO ===== */
+@media (max-width: 700px) {
+  .bloco-exemplo {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-mista {
+    grid-template-columns: 1fr;
+  }
+}
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
