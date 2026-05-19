@@ -1,0 +1,166 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #d9d9d9;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #000;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+  background: #7c7c7c;
+  padding: 0.8rem 2rem;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.navbar ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 0.4rem 0.9rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  display: block;
+}
+
+.navbar ul li a:hover {
+  background: #555;
+}
+
+.navbar ul li a.ativo {
+  background: #444;
+  font-weight: bold;
+}
+
+/* ===== TOP BAR ===== */
+.top-bar {
+  background: #a6a6a6;
+  padding: 1.2rem 2rem;
+}
+
+.top-bar h1 {
+  color: white;
+}
+
+/* ===== CONTENT ===== */
+.content {
+  width: 85%;
+  margin: auto;
+  padding: 2rem 0;
+}
+
+/* ===== INTRO ===== */
+.intro {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.intro h2 {
+  margin-bottom: 1rem;
+}
+
+.intro p {
+  line-height: 1.6;
+  color: #444;
+}
+
+/* ===== CARDS ===== */
+.topics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  background: #b5b5b5;
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+.card h3 {
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.card p {
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+/* ===== PRE / CODE ===== */
+pre {
+  background: #dcdcdc;
+  padding: 1rem;
+  overflow-x: auto;
+  border-radius: 4px;
+  font-size: 0.88rem;
+  font-family: "Courier New", monospace;
+}
+
+/* ===== COMPARISON ===== */
+.comparison {
+  margin-top: 4rem;
+}
+
+.comparison h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.comparison-box {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.bad,
+.good {
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+.bad {
+  background: #b5b5b5;
+}
+
+.good {
+  background: #9e9e9e;
+}
+
+.bad h3,
+.good h3 {
+  color: white;
+  margin-bottom: 1rem;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  text-align: center;
+  padding: 2rem;
+  color: #666;
+}
+
+/* ===== RESPONSIVO BASE ===== */
+@media (max-width: 768px) {
+  .content {
+    width: 92%;
+  }
+
+  .navbar ul {
+    gap: 0.3rem;
+  }
+
+  .navbar ul li a {
+    font-size: 0.8rem;
+    padding: 0.3rem 0.6rem;
+  }
+}

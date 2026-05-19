@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML e Acessibilidade</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="acessibilidade.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <ul>
+      <li><a href="index.html" class="ativo">HTML e Acessibilidade</a></li>
+      <li><a href="medidas.html">Medidas</a></li>
+      <li><a href="responsividade.html">Responsividade</a></li>
+      <li><a href="layout.html">Flexbox e Grid</a></li>
+      <li><a href="animacoes.html">Animações</a></li>
+    </ul>
+  </nav>
+
+  <header class="top-bar">
+    <h1>HTML e Acessibilidade</h1>
+  </header>
+
+  <main class="content">
+
+    <section class="intro">
+      <h2>O que é semântica e sua importância?</h2>
+      <p>
+        HTML semântico significa usar as tags corretas para cada tipo de conteúdo.
+        Isso ajuda os navegadores, leitores de tela e ferramentas de busca a entenderem
+        melhor a estrutura da página — tornando o site mais acessível e organizado.
+      </p>
+    </section>
+
+    <!-- TÓPICO 1 e 2: Semântica e tags -->
+    <section class="topics">
+
+      <article class="card">
+        <h3>1) O que é semântica?</h3>
+        <p>
+          Semântica é usar a tag certa para o conteúdo certo.
+          Em vez de usar só <code>&lt;div&gt;</code> para tudo,
+          usamos tags que descrevem o que o conteúdo representa.
+        </p>
+        <pre>
+&lt;!-- Sem semântica --&gt;
+&lt;div&gt;Menu&lt;/div&gt;
+
+&lt;!-- Com semântica --&gt;
+&lt;nav&gt;Menu&lt;/nav&gt;
+        </pre>
+      </article>
+
+      <article class="card">
+        <h3>2) Principais tags semânticas</h3>
+        <p>Tags que descrevem a estrutura da página:</p>
+        <pre>
+&lt;header&gt;   — cabeçalho
+&lt;nav&gt;      — navegação
+&lt;main&gt;     — conteúdo principal
+&lt;section&gt;  — seção temática
+&lt;article&gt;  — conteúdo independente
+&lt;aside&gt;    — conteúdo lateral
+&lt;footer&gt;   — rodapé
+        </pre>
+      </article>
+
+      <article class="card">
+        <h3>3) O que é acessibilidade?</h3>
+        <p>
+          Acessibilidade é desenvolver sites que possam ser usados por todas as pessoas,
+          incluindo usuários com deficiência visual, motora, auditiva ou cognitiva.
+          Torna a internet mais inclusiva para todos.
+        </p>
+      </article>
+
+      <article class="card">
+        <h3>4) Como melhorar a acessibilidade</h3>
+        <p>Boas práticas básicas:</p>
+        <pre>
+&lt;!-- Alt em imagens --&gt;
+&lt;img src="foto.jpg"
+     alt="Descrição da foto"&gt;
+
+&lt;!-- Label em formulários --&gt;
+&lt;label for="email"&gt;Email&lt;/label&gt;
+&lt;input type="email" id="email"&gt;
+        </pre>
+      </article>
+
+      <article class="card">
+        <h3>5) Navegação por teclado</h3>
+        <p>
+          A navegação por teclado permite que o usuário use o site
+          sem precisar do mouse, usando as teclas <strong>Tab</strong>,
+          <strong>Enter</strong> e <strong>Setas</strong>.
+        </p>
+        <pre>
+button:focus {
+  outline: 2px solid blue;
+}
+
+input:focus {
+  outline: 2px solid blue;
+}
+        </pre>
+      </article>
+
+    </section>
+
+    <!-- Comparação bom vs ruim -->
+    <section class="comparison">
+      <h2>Código acessível vs não acessível</h2>
+      <div class="comparison-box">
+
+        <div class="bad">
+          <h3>❌ Código ruim</h3>
+          <pre>
+&lt;!-- Sem label --&gt;
+&lt;input placeholder="Email"&gt;
+
+&lt;!-- Sem alt --&gt;
+&lt;img src="foto.jpg"&gt;
+
+&lt;!-- Tag sem sentido --&gt;
+&lt;div&gt;Navegação&lt;/div&gt;
+          </pre>
+        </div>
+
+        <div class="good">
+          <h3>✅ Código acessível</h3>
+          <pre>
+&lt;!-- Com label --&gt;
+&lt;label for="email"&gt;Email&lt;/label&gt;
+&lt;input type="email" id="email"&gt;
+
+&lt;!-- Com alt --&gt;
+&lt;img src="foto.jpg"
+     alt="Foto do produto"&gt;
+
+&lt;!-- Tag semântica --&gt;
+&lt;nav&gt;Navegação&lt;/nav&gt;
+          </pre>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Formulário acessível de demonstração -->
+    <section class="form-section">
+      <h2>Formulário acessível — experimente navegar com Tab!</h2>
+      <form>
+        <label for="nome">Nome</label>
+        <input type="text" id="nome">
+
+        <label for="email2">Email</label>
+        <input type="email" id="email2">
+
+        <button type="submit">Enviar</button>
+        <button type="reset">Limpar</button>
+      </form>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>@todos os direitos reservados</p>
+  </footer>
+
+</body>
+</html>

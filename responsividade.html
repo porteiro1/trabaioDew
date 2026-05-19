@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsividade e Mobile First</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="responsividade.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <ul>
+      <li><a href="index.html">HTML e Acessibilidade</a></li>
+      <li><a href="medidas.html">Medidas</a></li>
+      <li><a href="responsividade.html" class="ativo">Responsividade</a></li>
+      <li><a href="layout.html">Flexbox e Grid</a></li>
+      <li><a href="animacoes.html">Animações</a></li>
+    </ul>
+  </nav>
+
+  <header class="top-bar">
+    <h1>Responsividade e Mobile First</h1>
+  </header>
+
+  <main class="content">
+
+    <section class="intro">
+      <h2>7) O que é responsividade?</h2>
+      <p>
+        Responsividade é a capacidade de um site se adaptar a diferentes tamanhos de tela,
+        como celulares, tablets, notebooks e monitores grandes. Um site responsivo muda
+        o tamanho e a organização dos elementos automaticamente para melhorar a visualização
+        em qualquer dispositivo.
+      </p>
+    </section>
+
+    <!-- Tópico 7: Responsividade -->
+    <section class="topics">
+
+      <article class="card">
+        <h3>Como funciona?</h3>
+        <p>
+          Usamos <strong>media queries</strong> no CSS para aplicar estilos
+          diferentes dependendo do tamanho da tela.
+        </p>
+        <pre>
+@media (max-width: 768px) {
+  .menu {
+    flex-direction: column;
+  }
+}
+        </pre>
+      </article>
+
+      <article class="card">
+        <h3>Dispositivos comuns</h3>
+        <p>Tamanhos de tela mais usados como referência:</p>
+        <pre>
+/* Celular */
+max-width: 480px
+
+/* Tablet */
+max-width: 768px
+
+/* Notebook */
+max-width: 1024px
+
+/* Monitor */
+min-width: 1280px
+        </pre>
+      </article>
+
+      <article class="card">
+        <h3>width: 100%</h3>
+        <p>
+          Uma das formas mais simples de responsividade é usar
+          <code>width: 100%</code> nos elementos,
+          fazendo com que ocupem toda a largura disponível.
+        </p>
+        <pre>
+img {
+  width: 100%;
+}
+
+.caixa {
+  width: 100%;
+}
+        </pre>
+      </article>
+
+    </section>
+
+    <!-- Tópico 11: Mobile First -->
+    <section class="mobile-first">
+      <h2>11) Mobile First — o que é e por que usar?</h2>
+
+      <div class="comparison-box">
+
+        <div class="bad">
+          <h3>❌ Desktop First</h3>
+          <p>Começa o CSS pelo desktop e usa <code>max-width</code> para adaptar ao celular. O celular vira caso especial.</p>
+          <pre>
+/* começa no desktop */
+.grid {
+  grid-template-columns:
+    repeat(3, 1fr);
+}
+
+/* adapta pro celular */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+          </pre>
+        </div>
+
+        <div class="good">
+          <h3>✅ Mobile First</h3>
+          <p>Começa o CSS pelo celular e usa <code>min-width</code> para expandir em telas maiores. É a abordagem recomendada.</p>
+          <pre>
+/* começa no celular */
+.grid {
+  grid-template-columns: 1fr;
+}
+
+/* expande pro desktop */
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns:
+      repeat(3, 1fr);
+  }
+}
+          </pre>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Demo visual responsivo -->
+    <section class="demo-responsivo">
+      <h2>Demonstração: grid responsivo</h2>
+      <p>Redimensione a janela para ver o layout mudar automaticamente.</p>
+      <div class="grid-demo">
+        <div class="grid-item">Item 1</div>
+        <div class="grid-item">Item 2</div>
+        <div class="grid-item">Item 3</div>
+        <div class="grid-item">Item 4</div>
+        <div class="grid-item">Item 5</div>
+        <div class="grid-item">Item 6</div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>@todos os direitos reservados</p>
+  </footer>
+
+</body>
+</html>

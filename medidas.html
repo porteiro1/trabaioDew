@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Medidas Relativas</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="medidas.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <ul>
+      <li><a href="index.html">HTML e Acessibilidade</a></li>
+      <li><a href="medidas.html" class="ativo">Medidas</a></li>
+      <li><a href="responsividade.html">Responsividade</a></li>
+      <li><a href="layout.html">Flexbox e Grid</a></li>
+      <li><a href="animacoes.html">Animações</a></li>
+    </ul>
+  </nav>
+
+  <header class="top-bar">
+    <h1>Medidas Relativas</h1>
+  </header>
+
+  <main class="content">
+
+    <section class="intro">
+      <h2>6) Por que usar medidas relativas?</h2>
+      <p>
+        Medidas relativas ajudam o site a se adaptar melhor a diferentes telas e tamanhos de texto.
+        Elas são mais eficientes do que medidas fixas como <strong>px</strong>.
+      </p>
+    </section>
+
+    <!-- Cards das medidas -->
+    <section class="topics">
+
+      <article class="card">
+        <h3>% — Porcentagem</h3>
+        <p>
+          Relativa ao elemento pai. Se o pai tem 800px de largura,
+          <code>width: 50%</code> resulta em 400px.
+        </p>
+        <pre>
+.caixa {
+  width: 80%;
+}
+        </pre>
+        <div class="demo-container">
+          <div class="demo-barra barra-80">80%</div>
+          <div class="demo-barra barra-50">50%</div>
+          <div class="demo-barra barra-30">30%</div>
+        </div>
+      </article>
+
+      <article class="card">
+        <h3>rem — Root em</h3>
+        <p>
+          Relativa ao tamanho de fonte do elemento raiz <code>&lt;html&gt;</code>.
+          Por padrão, <code>1rem = 16px</code>.
+        </p>
+        <pre>
+h1 {
+  font-size: 2rem; /* 32px */
+}
+
+p {
+  font-size: 1rem; /* 16px */
+}
+        </pre>
+        <div class="demo-rem">
+          <p class="texto-2rem">Texto 2rem</p>
+          <p class="texto-1rem">Texto 1rem</p>
+          <p class="texto-08rem">Texto 0.8rem</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <h3>vw — Viewport Width</h3>
+        <p>
+          Relativa à largura da janela do navegador.
+          <code>1vw = 1%</code> da largura da tela.
+        </p>
+        <pre>
+.titulo {
+  font-size: 5vw;
+}
+        </pre>
+        <div class="demo-vw">
+          <p>Este texto usa <code>3vw</code> — cresce com a tela!</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <h3>vh — Viewport Height</h3>
+        <p>
+          Relativa à altura da janela do navegador.
+          <code>100vh = altura total</code> da tela visível.
+        </p>
+        <pre>
+.hero {
+  height: 100vh;
+}
+        </pre>
+        <div class="demo-vh">
+          <p>Esta caixa tem <code>20vh</code> de altura</p>
+        </div>
+      </article>
+
+    </section>
+
+    <!-- Comparação px vs relativo -->
+    <section class="comparison">
+      <h2>Medidas fixas vs relativas</h2>
+      <div class="comparison-box">
+
+        <div class="bad">
+          <h3>❌ Medidas fixas (px)</h3>
+          <pre>
+.caixa {
+  width: 600px;
+  font-size: 24px;
+  height: 400px;
+}
+          </pre>
+          <p>Problemas: não se adapta a telas menores ou maiores. O layout pode quebrar.</p>
+        </div>
+
+        <div class="good">
+          <h3>✅ Medidas relativas</h3>
+          <pre>
+.caixa {
+  width: 80%;
+  font-size: 1.5rem;
+  height: 50vh;
+}
+          </pre>
+          <p>Vantagem: se adapta automaticamente a qualquer tamanho de tela.</p>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>@todos os direitos reservados</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animações CSS</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="animacoes.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <ul>
+      <li><a href="index.html">HTML e Acessibilidade</a></li>
+      <li><a href="medidas.html">Medidas</a></li>
+      <li><a href="responsividade.html">Responsividade</a></li>
+      <li><a href="layout.html">Flexbox e Grid</a></li>
+      <li><a href="animacoes.html" class="ativo">Animações</a></li>
+    </ul>
+  </nav>
+
+  <header class="top-bar">
+    <h1>Animações CSS</h1>
+  </header>
+
+  <main class="content">
+
+    <section class="intro">
+      <h2>10) Animações com CSS</h2>
+      <p>
+        O CSS permite criar animações sem precisar de JavaScript.
+        As duas formas principais são: <strong>transition</strong> (para efeitos no hover)
+        e <strong>@keyframes + animation</strong> (para animações automáticas).
+      </p>
+    </section>
+
+    <!-- Transition -->
+    <section class="topics">
+
+      <article class="card">
+        <h3>transition</h3>
+        <p>
+          Cria uma transição suave quando uma propriedade muda de valor.
+          Muito usado com <code>:hover</code>.
+        </p>
+        <pre>
+.botao {
+  background: gray;
+  transition: background 0.3s;
+}
+
+.botao:hover {
+  background: #444;
+}
+        </pre>
+        <p>Passe o mouse no botão:</p>
+        <button class="btn-transition">Passe o mouse aqui</button>
+      </article>
+
+      <article class="card">
+        <h3>transform</h3>
+        <p>
+          Muda a forma ou posição de um elemento visualmente.
+          Pode ser usado junto com <code>transition</code>.
+        </p>
+        <pre>
+.caixa:hover {
+  transform: scale(1.1);
+  transform: rotate(5deg);
+  transform: translateX(10px);
+}
+        </pre>
+        <p>Passe o mouse nas caixas:</p>
+        <div class="demo-transforms">
+          <div class="box box-scale">Scale</div>
+          <div class="box box-rotate">Rotate</div>
+          <div class="box box-translate">Translate</div>
+        </div>
+      </article>
+
+      <article class="card">
+        <h3>@keyframes</h3>
+        <p>
+          Define os estados de uma animação. Você escolhe o que acontece
+          no início (<code>from</code> / <code>0%</code>)
+          e no fim (<code>to</code> / <code>100%</code>).
+        </p>
+        <pre>
+@keyframes piscar {
+  from { opacity: 1; }
+  to   { opacity: 0; }
+}
+        </pre>
+      </article>
+
+      <article class="card">
+        <h3>animation</h3>
+        <p>
+          Aplica o <code>@keyframes</code> a um elemento,
+          definindo duração, repetição e estilo.
+        </p>
+        <pre>
+.caixa {
+  animation: piscar
+             1s
+             infinite
+             alternate;
+}
+        </pre>
+      </article>
+
+    </section>
+
+    <!-- Demos de animação -->
+    <section class="demos-animacao">
+      <h2>Demonstrações de animação</h2>
+
+      <div class="demo-grid-animacoes">
+
+        <div class="demo-card">
+          <h3>Pulsando</h3>
+          <pre>
+@keyframes pulsar {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+          </pre>
+          <div class="demo-area">
+            <div class="bola-pulsar"></div>
+          </div>
+        </div>
+
+        <div class="demo-card">
+          <h3>Deslizando</h3>
+          <pre>
+@keyframes deslizar {
+  from { transform: translateX(0); }
+  to   { transform: translateX(60px); }
+}
+          </pre>
+          <div class="demo-area">
+            <div class="bola-deslizar"></div>
+          </div>
+        </div>
+
+        <div class="demo-card">
+          <h3>Girando</h3>
+          <pre>
+@keyframes girar {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+          </pre>
+          <div class="demo-area">
+            <div class="bola-girar"></div>
+          </div>
+        </div>
+
+        <div class="demo-card">
+          <h3>Piscando</h3>
+          <pre>
+@keyframes piscar {
+  from { opacity: 1; }
+  to   { opacity: 0; }
+}
+          </pre>
+          <div class="demo-area">
+            <div class="bola-piscar"></div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Resumo das propriedades -->
+    <section class="comparison">
+      <h2>Propriedades principais</h2>
+      <div class="comparison-box">
+        <div class="bad">
+          <h3>transition</h3>
+          <pre>
+transition: propriedade
+            duração
+            timing;
+
+Exemplo:
+transition: background 0.3s ease;
+          </pre>
+        </div>
+        <div class="good">
+          <h3>animation</h3>
+          <pre>
+animation: nome
+           duração
+           repetição
+           direção;
+
+Exemplo:
+animation: pulsar 1s infinite;
+          </pre>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>@todos os direitos reservados</p>
+  </footer>
+
+</body>
+</html>

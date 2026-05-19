@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexbox e Grid</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="layout.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <ul>
+      <li><a href="index.html">HTML e Acessibilidade</a></li>
+      <li><a href="medidas.html">Medidas</a></li>
+      <li><a href="responsividade.html">Responsividade</a></li>
+      <li><a href="layout.html" class="ativo">Flexbox e Grid</a></li>
+      <li><a href="animacoes.html">Animações</a></li>
+    </ul>
+  </nav>
+
+  <header class="top-bar">
+    <h1>Flexbox e Grid</h1>
+  </header>
+
+  <main class="content">
+
+    <section class="intro">
+      <h2>8) Diferença entre Flexbox e Grid</h2>
+      <p>
+        Tanto Flexbox quanto Grid são formas de organizar elementos na tela com CSS.
+        A diferença está em como cada um trabalha: Flexbox em uma direção só,
+        Grid em linhas e colunas ao mesmo tempo.
+      </p>
+    </section>
+
+    <!-- Flexbox -->
+    <section class="secao-layout">
+      <h2>Flexbox — uma direção</h2>
+
+      <div class="comparison-box">
+        <div class="bad">
+          <h3>O que é?</h3>
+          <p>
+            O Flexbox organiza elementos em <strong>linha</strong> ou <strong>coluna</strong>.
+            Ele é muito usado para menus, barras de navegação e alinhar itens lado a lado.
+          </p>
+          <pre>
+.menu {
+  display: flex;
+  gap: 1rem;
+}
+
+/* coluna */
+.formulario {
+  display: flex;
+  flex-direction: column;
+}
+          </pre>
+        </div>
+        <div class="good">
+          <h3>Demonstração: flex em linha</h3>
+          <div class="demo-flex-linha">
+            <div class="flex-item">Item 1</div>
+            <div class="flex-item">Item 2</div>
+            <div class="flex-item">Item 3</div>
+          </div>
+          <h3 style="margin-top:1rem;">Demonstração: flex em coluna</h3>
+          <div class="demo-flex-coluna">
+            <div class="flex-item">Item A</div>
+            <div class="flex-item">Item B</div>
+            <div class="flex-item">Item C</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card quando-usar">
+        <h3>9) Quando usar Flexbox?</h3>
+        <p>Use Flexbox quando precisar organizar elementos em <strong>uma direção</strong>:</p>
+        <pre>
+✔ Menus de navegação
+✔ Botões lado a lado
+✔ Centralizar um elemento
+✔ Barras com logo + links
+        </pre>
+      </div>
+    </section>
+
+    <!-- Grid -->
+    <section class="secao-layout">
+      <h2>Grid — linhas e colunas</h2>
+
+      <div class="comparison-box">
+        <div class="bad">
+          <h3>O que é?</h3>
+          <p>
+            O Grid trabalha com <strong>linhas e colunas ao mesmo tempo</strong>.
+            É ideal para estruturas de páginas completas,
+            galerias de imagens e sistemas de cards.
+          </p>
+          <pre>
+.galeria {
+  display: grid;
+  grid-template-columns:
+    repeat(3, 1fr);
+  gap: 1rem;
+}
+          </pre>
+        </div>
+        <div class="good">
+          <h3>Demonstração: grid 3 colunas</h3>
+          <div class="demo-grid">
+            <div class="grid-item">Card 1</div>
+            <div class="grid-item">Card 2</div>
+            <div class="grid-item">Card 3</div>
+            <div class="grid-item">Card 4</div>
+            <div class="grid-item">Card 5</div>
+            <div class="grid-item">Card 6</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card quando-usar">
+        <h3>9) Quando usar Grid?</h3>
+        <p>Use Grid quando precisar organizar elementos em <strong>duas direções</strong>:</p>
+        <pre>
+✔ Layout de página inteira
+✔ Galerias de fotos
+✔ Painéis com colunas e linhas
+✔ Sistemas de cards complexos
+        </pre>
+      </div>
+    </section>
+
+    <!-- Resumo comparativo -->
+    <section class="comparison">
+      <h2>Resumo: Flexbox vs Grid</h2>
+      <div class="comparison-box">
+        <div class="bad">
+          <h3>Flexbox</h3>
+          <pre>
+Direção: 1D (linha OU coluna)
+Uso: menus, barras, alinhamento
+Propriedade: display: flex
+          </pre>
+        </div>
+        <div class="good">
+          <h3>Grid</h3>
+          <pre>
+Direção: 2D (linhas E colunas)
+Uso: layouts, galerias, cards
+Propriedade: display: grid
+          </pre>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>@todos os direitos reservados</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+.form-section {
+  margin-top: 4rem;
+  background: #b5b5b5;
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+.form-section h2 {
+  color: white;
+  margin-bottom: 1.5rem;
+}
+
+.form-section form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-section label {
+  font-weight: bold;
+  color: white;
+}
+
+.form-section input {
+  padding: 0.8rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.form-section button {
+  padding: 0.8rem;
+  border: none;
+  border-radius: 5px;
+  background: #7c7c7c;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.form-section button:hover {
+  background: #555;
+}
+
+button:focus,
+input:focus {
+  outline: 2px solid blue;
+}
+
+code {
+  background: #ccc;
+  padding: 0.1rem 0.3rem;
+  border-radius: 3px;
+  font-family: "Courier New", monospace;
+  font-size: 0.9rem;
+}
